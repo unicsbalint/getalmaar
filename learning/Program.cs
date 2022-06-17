@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using learning.FactoryMethod;
 using learning.Adapter;
+using learning.Decorator;
+using learning.Proxy;
 
 namespace learning
 {
@@ -44,11 +46,41 @@ namespace learning
             }
 
             // Szerkezeti tervezési minták:
+
+            // Illesztő / adapter
             Robot R2D2 = new Robot("R2D2", 80000);
             Human R2D2wrapper = new Robot2Human(R2D2);
             Console.WriteLine("Neve: {0}", R2D2wrapper.GetName());
             Console.WriteLine("IQ-ja: {0}", R2D2wrapper.GetIQ());
 
+            // Díszítő - decorator
+
+            //Létrehozok egy objektumot ami örököl read-only fieldeket és overrideolja őket
+            //hogy személyre szabott típus legyen.
+            //Nekünk az Audi A5 örökölt mindent a VehicleBase-ből, Make,model,hirelaps,hireprice
+            AudiA5 car = new AudiA5();
+            Console.WriteLine("Alap Audi A5:\r\n");
+            Console.WriteLine("Alap ár: {0}, alap tesztkörök száma: {1}\r\n\r\n", car.HirePrice, car.HireLaps);
+
+
+            SpecialOffer offer = new SpecialOffer(car);
+                         offer.Discount = 25;
+                         offer.ExtraLaps = 2;
+
+            Console.WriteLine("Speciális ajánlat:\r\n");
+            Console.WriteLine("Különleges ajánlat ára: {0}, {1}$-ért\r\n\r\n", offer.HirePrice, offer.HireLaps);
+            Hireable hire = new Hireable(car);
+            hire.Hire("Bill");
+            Hireable hire2 = new Hireable(offer);
+            hire2.Hire("Jack");
+
+
+            // Proxy
+
+            // Készítünk egy helyettest és kérünk egy szolgáltatást.
+            ProxyClass proxy = new ProxyClass();
+            proxy.Request();
+            Console.ReadKey();
 
             Console.ReadKey();
         }
