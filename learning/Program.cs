@@ -7,6 +7,7 @@ using learning.FactoryMethod;
 using learning.Adapter;
 using learning.Decorator;
 using learning.Proxy;
+using learning.State;
 
 namespace learning
 {
@@ -14,6 +15,8 @@ namespace learning
     {
         static void Main(string[] args)
         {
+            // Létrehozási tervezési minták:
+
             // Singleton osztály, csak egy példánya lehet.
             SingletonClass s1 = SingletonClass.GetInstance();
             SingletonClass s2 = SingletonClass.GetInstance();
@@ -80,9 +83,35 @@ namespace learning
             // Készítünk egy helyettest és kérünk egy szolgáltatást.
             ProxyClass proxy = new ProxyClass();
             proxy.Request();
-            Console.ReadKey();
+
+
+
+            //Viselkedési tervezési minták
+
+            // State - állapot
+            AudioPlayer player = new AudioPlayer(new StandbyState());
+            player.PressPlay();
+            player.PressAudioSource();
+            player.PressPlay();
+            player.PressPlay();
+            player.PressAudioSource();
+            player.PressPlay();
+            player.PressAudioSource();
+
+
+            // Megfigyelő – Observer
+
+            // Sablonmetódus – Template Method
+
+            // Stratégia – Strategy
+
+            // Látogató – Visitor (ágensalapú programozás tervezési minta)
+
 
             Console.ReadKey();
+
+
+
         }
    
 }

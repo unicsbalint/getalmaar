@@ -70,6 +70,12 @@
     <Compile Include="Singleton\SingletonClass.cs" />
     <Compile Include="Prototype\Sportscar.cs" />
     <Compile Include="Singleton\ThreadSafeSingleton.cs" />
+    <Compile Include="State\AudioPlayer.cs" />
+    <Compile Include="State\AudioPlayerState.cs" />
+    <Compile Include="State\MP3PausedState.cs" />
+    <Compile Include="State\MP3PlayingState.cs" />
+    <Compile Include="State\RadioState.cs" />
+    <Compile Include="State\StandByState.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
