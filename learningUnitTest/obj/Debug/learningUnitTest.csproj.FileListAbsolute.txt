@@ -1,0 +1,17 @@
+C:\Users\CSB4HTV\source\repos\learning\learningUnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\CSB4HTV\source\repos\learning\learningUnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\CSB4HTV\source\repos\learning\learningUnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\CSB4HTV\source\repos\learning\learningUnitTest\bin\Debug\learningUnitTest.dll
+C:\Users\CSB4HTV\source\repos\learning\learningUnitTest\bin\Debug\learningUnitTest.pdb
+C:\Users\CSB4HTV\source\repos\learning\learningUnitTest\bin\Debug\learning.exe
+C:\Users\CSB4HTV\source\repos\learning\learningUnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\CSB4HTV\source\repos\learning\learningUnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\CSB4HTV\source\repos\learning\learningUnitTest\bin\Debug\learning.pdb
+C:\Users\CSB4HTV\source\repos\learning\learningUnitTest\bin\Debug\learning.exe.config
+C:\Users\CSB4HTV\source\repos\learning\learningUnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\CSB4HTV\source\repos\learning\learningUnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\CSB4HTV\source\repos\learning\learningUnitTest\obj\Debug\learningUnitTest.csprojAssemblyReference.cache
+C:\Users\CSB4HTV\source\repos\learning\learningUnitTest\obj\Debug\learningUnitTest.csproj.CoreCompileInputs.cache
+C:\Users\CSB4HTV\source\repos\learning\learningUnitTest\obj\Debug\learningUnitTest.csproj.CopyComplete
+C:\Users\CSB4HTV\source\repos\learning\learningUnitTest\obj\Debug\learningUnitTest.dll
+C:\Users\CSB4HTV\source\repos\learning\learningUnitTest\obj\Debug\learningUnitTest.pdb
