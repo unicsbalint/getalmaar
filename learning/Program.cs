@@ -8,6 +8,10 @@ using learning.Adapter;
 using learning.Decorator;
 using learning.Proxy;
 using learning.State;
+using static learning.Observer_min.ObserverDeNincsIdomMegirniKulonOsztalyokba;
+using static learning.Template_min.TemplateDeNincsIdomMegirniRendesen;
+using static learning.Strategy.StrategyDeNincsIdoMegirniRendesen;
+using static learning.Visitor_min.VisitorCsakNincsIdoMegirniRendesen;
 
 namespace learning
 {
@@ -101,11 +105,40 @@ namespace learning
 
             // Megfigyelő – Observer
 
+            // létrehozzuk a weatherData objektumot
+            WeatherData weatherData = new WeatherData();
+            // létrehozzuk a displayt és odaajuk neki a weatherData-t
+            CurrentConditionsDisplay currentDisplay =
+            new CurrentConditionsDisplay(weatherData);
+            // új időjárási mérésértékek szimulálása
+            weatherData.SetMeasurements(80, 65, 30.4f);
+            weatherData.SetMeasurements(82, 70, 29.2f);
+            weatherData.SetMeasurements(78, 90, 29.2f);
+
             // Sablonmetódus – Template Method
+            Ital tea = new Tea();
+            Ital kávé = new Kávé();
+            tea.Elkészít();  // a késői kötés miatt a Tea főz és édesít metódusa fut
+            kávé.Elkészít(); // a késői kötés miatt a Kávé főz és édesít metódusa fut
 
             // Stratégia – Strategy
+            KávéGép automata = new KávéGép();
+            automata.KávéValasztás(new GyengeKávé());
+            automata.KávéFőzés();
+            automata.KávéValasztás(new ErősKávé());
+            automata.KávéFőzés();
+            automata.KávéValasztás(new NormalKávé());
+            automata.KávéFőzés();
 
             // Látogató – Visitor (ágensalapú programozás tervezési minta)
+            BFa fa = new Fa(5, new Levél(8), new Levél(3));
+            SumVisitor sumv = new SumVisitor();
+            MaxVisitor maxv = new MaxVisitor();
+            fa.Accept(sumv);
+            fa.Accept(maxv);
+            Console.WriteLine("A fában lévő számok összege: {0}", sumv.Sum);
+            Console.WriteLine("A fában lévő legnagyobb szám: {0}", maxv.Max);
+
 
 
             Console.ReadKey();
